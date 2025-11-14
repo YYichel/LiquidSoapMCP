@@ -1,7 +1,7 @@
 # ⭐ Liquidsoap MCP Server  
 ### *AI-powered, version-accurate Liquidsoap scripting using the official 2.4.0 docs.*
 
-![Stars](https://img.shields.io/github/stars/splinesreticulating/liquidsoap-mcp?style=social)
+![Stars](https://img.shields.io/github/stars/splinesreticulating/LiquidSoapMCP?style=social)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 LLMs get Liquidsoap wrong *all the time*—mixing 1.x docs, outdated blog posts, and half-remembered API examples.
