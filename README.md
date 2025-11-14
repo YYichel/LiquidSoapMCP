@@ -1,81 +1,126 @@
-# LiquidSoap MCP Server
+# ⭐ Liquidsoap MCP Server  
+### *AI-powered, version-accurate Liquidsoap scripting using the official 2.4.0 docs.*
 
-A Model Context Protocol (MCP) server that provides comprehensive access to LiquidSoap 2.4.0 documentation, examples, and script assistance.
+![Stars](https://img.shields.io/github/stars/yourname/liquidsoap-mcp?style=social)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Overview
+LLMs get Liquidsoap wrong *all the time*—mixing 1.x docs, outdated blog posts, and half-remembered API examples.
 
-This MCP server enables AI assistants like Claude to help you work with LiquidSoap by providing:
+**This MCP server fixes that.**
 
-- **Version-specific documentation** for LiquidSoap 2.4.0
-- **API reference search** to find functions and operators
-- **Code examples** for common streaming tasks
-- **Changelog and migration information** from earlier versions
-- **Basic script validation** to catch deprecated usage and syntax issues
-- **Documentation caching** for faster responses
+It gives your AI assistant (Claude, ChatGPT, Cursor, Windsurf, etc.) **real Liquidsoap 2.4.0 documentation, examples, and API references**, making it finally possible to:
 
-## Features
+- Understand `.liq` scripts  
+- Generate correct 2.4.0 code  
+- Fix errors and deprecated usage  
+- Explore operators, functions, transitions, and patterns  
+- Build web radio pipelines with confidence  
 
-### Tools
+No hallucinations. No version drift. No mystery errors.
 
-1. **get_version** - Returns the supported LiquidSoap version (2.4.0)
-2. **list_sections** - Lists all available documentation sections
-3. **get_documentation** - Fetches specific documentation sections:
-   - `language` - Complete language reference
-   - `reference` - Core API with all built-in functions
-   - `protocols` - Supported protocols (HTTP, Icecast, HLS, etc.)
-   - `settings` - Runtime configuration settings
-   - `ffmpeg` - FFmpeg integration
-   - `quickstart` - Getting started tutorial
-   - `cookbook` - Common recipes and patterns
-   - `encoding_formats` - Audio/video encoding formats
+---
 
-4. **search_functions** - Search for functions by name or keyword
-5. **get_changelog** - View 2.4.0 changelog and breaking changes
-6. **get_examples** - Get code examples for:
-   - Basic streaming
-   - Crossfading
-   - Fallback sources
-   - Metadata manipulation
-   - Audio normalization (LUFS)
-   - Blank detection
-   - HLS output
-   - Harbor (HTTP input)
-   - Cron scheduling
-   - Encoding formats
+# 🚀 Why this exists
 
-7. **validate_script_syntax** - Basic validation for deprecated functions and syntax issues
+Liquidsoap is incredibly powerful—but:
 
-## Installation
+- Documentation varies heavily between versions  
+- 1.x and 2.x syntax differs in subtle ways  
+- LLMs blend outdated examples into their answers  
+- Even the official docs are spread across sections, pages, and changelogs  
 
-### Prerequisites
+**This MCP server gives your AI one job:**  
+📌 *Stick to Liquidsoap 2.4.0 exactly.*
 
-- Node.js 18 or higher
-- npm or yarn
+It exposes a clean, structured API around the official docs so your assistant becomes a reliable Liquidsoap expert.
 
-### From npm (once published)
+---
+
+# ✨ Features
+
+## 📚 Version-Pinned Documentation (2.4.0)
+- Full language reference  
+- Core API functions & operators  
+- Protocols (Icecast, HLS, HTTP, SRT, etc.)  
+- Encoder/decoder options  
+- Runtime settings  
+
+## 🔍 Smart Search
+- Search functions/operators by name or keyword  
+- Search through examples, patterns, and cookbook items  
+- Search 2.4.0 changelog & migration notes
+
+## 🧪 Script Assistance
+- Detect deprecated functions (e.g. `null()`, `insert_metadata`)  
+- Warn about 1.x syntax  
+- Highlight common design pitfalls  
+
+## 🧩 Example Library
+Includes ready-to-use code snippets for:
+
+- Crossfading  
+- Fallback chains  
+- Harbor live input  
+- HLS output  
+- Cron scheduling (`cron.add`, `cron.parse`)  
+- Metadata rewriting  
+- LUFS normalization  
+- Blank detection  
+- Multi-output pipelines  
+
+## ⚡ Fast & Local  
+- Docs cached and indexed for instant responses  
+- No web requests needed once running  
+
+---
+
+# 📸 Demo (example)
+
+*(Add GIF or screenshots here)*
+
+Ask natural questions like:
+
+- “Explain what this Liquidsoap script does.”  
+- “Add a safe fallback chain before the HLS output.”  
+- “Show the API docs for `crossfade`.”  
+- “Rewrite this script using the new 2.4.0 `null` semantics.”  
+
+Your AI responds using *only* the real 2.4.0 documentation.
+
+---
+
+# 🛠 Installation
+
+## Prerequisites
+- Node.js ≥ 18  
+- Any MCP-compatible client (Claude Desktop, ChatGPT Desktop, Cursor, Windsurf, etc.)
+
+## Install via npm (recommended)
 
 ```bash
 npm install -g liquidsoap-mcp-server
 ```
 
-### From source
+## Or run from source
 
 ```bash
-git clone https://github.com/yourusername/LiquidSoapMCP.git
-cd LiquidSoapMCP
+git clone https://github.com/yourname/liquidsoap-mcp.git
+cd liquidsoap-mcp
 npm install
 npm run build
 ```
 
-## Usage
+---
 
-### With Claude Desktop
+# 💬 Usage
 
-Add this configuration to your Claude Desktop config file:
+## Claude Desktop Example
 
-**MacOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**macOS:**  
+`~/Library/Application Support/Claude/claude_desktop_config.json`
 
-**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+**Windows:**  
+`%APPDATA%/Claude/claude_desktop_config.json`
 
 ```json
 {
@@ -88,107 +133,82 @@ Add this configuration to your Claude Desktop config file:
 }
 ```
 
-Or if installed from source:
+## From source:
 
 ```json
 {
   "mcpServers": {
     "liquidsoap": {
       "command": "node",
-      "args": ["/absolute/path/to/LiquidSoapMCP/build/index.js"]
+      "args": ["/absolute/path/to/liquidsoap-mcp/build/index.js"]
     }
   }
 }
 ```
 
-### With Other MCP Clients
+---
 
-The server communicates via stdio and follows the MCP protocol. You can integrate it with any MCP-compatible client by running:
+# 🧠 Supported Tools
 
-```bash
-liquidsoap-mcp-server
-```
+## 🔧 Core Tools
+- `get_version`
+- `list_sections`
+- `get_documentation(section)`
+- `search_functions(query)`
+- `get_changelog`
+- `get_examples(topic)`
+- `validate_script_syntax(script)`
 
-## Example Usage
+## 📁 Documentation Sections
+- `language`
+- `reference`
+- `protocols`
+- `settings`
+- `encoding_formats`
+- `ffmpeg`
+- `quickstart`
+- `cookbook`
 
-Once configured, you can ask Claude questions like:
+---
 
-- "Show me the LiquidSoap 2.4.0 language documentation"
-- "Search for functions related to crossfading"
-- "Give me an example of HLS output"
-- "What's new in LiquidSoap 2.4.0?"
-- "Validate this LiquidSoap script for deprecated functions"
-- "How do I normalize audio levels in LiquidSoap?"
-- "Show me how to use Harbor for live input"
+# 🎯 Roadmap
 
-## Why LiquidSoap 2.4.0?
+- [ ] Add Liquidsoap script graph visualization  
+- [ ] Integrate `liquidsoap --check` for real syntax/type validation  
+- [ ] Multi-version switching (2.2.x, 2.3.x)  
+- [ ] Fuzzy search & semantic examples  
+- [ ] “Explain this error log” tool  
+- [ ] Snippet library for common pipeline patterns  
 
-This server exclusively targets LiquidSoap 2.4.0 to avoid confusion from mixing documentation across versions. Version 2.4.0 introduces important changes:
+---
 
-- Function argument destructuring
-- Enhanced labelled arguments
-- Asynchronous callbacks by default
-- First-class `null` constant
-- New cron utilities (`cron.add`, `cron.parse`, `cron.remove`)
-- LUFS-based loudness normalization
-- Deprecated functions (e.g., `null()`, old `insert_metadata`, `replaygain`)
+# 🤝 Contributing
 
-## Development
+PRs welcome—especially:
 
-### Build
+- New examples  
+- Improved search  
+- Doc parsing improvements  
+- More validation rules  
+- Better MCP client integrations  
 
-```bash
-npm run build
-```
+---
 
-### Watch mode
+# 📚 Resources
 
-```bash
-npm run watch
-```
+- https://www.liquidsoap.info/doc-2.4.0/  
+- https://modelcontextprotocol.io/  
+- https://github.com/modelcontextprotocol/typescript-sdk  
 
-### Run locally
+---
 
-```bash
-npm run dev
-```
+# ❤️ Acknowledgments
 
-## Project Structure
+Built for the Liquidsoap community—and for all the radio nerds, DJs, and hobby streamers who want to make Liquidsoap easier, safer, and way more fun with AI assistance.
 
-```
-LiquidSoapMCP/
-├── src/
-│   └── index.ts          # Main server implementation
-├── build/                # Compiled JavaScript (generated)
-├── package.json
-├── tsconfig.json
-└── README.md
-```
+---
 
-## Contributing
+## ⭐ Want to support the project?
 
-Contributions are welcome! Please feel free to submit issues or pull requests.
-
-### Ideas for Enhancement
-
-- Add more code examples and patterns
-- Implement fuzzy search for functions
-- Add script linting with more comprehensive rules
-- Cache documentation locally for offline use
-- Add support for custom user scripts library
-- Integration with liquidsoap --check for real validation
-
-## License
-
-MIT
-
-## Resources
-
-- [LiquidSoap Official Website](https://www.liquidsoap.info/)
-- [LiquidSoap 2.4.0 Documentation](https://www.liquidsoap.info/doc-2.4.0/)
-- [Model Context Protocol](https://modelcontextprotocol.io/)
-- [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk)
-
-## Acknowledgments
-
-Built for the LiquidSoap community to make working with this powerful streaming language easier and more accessible with AI assistance.
+**Please star the repo!**  
+It helps others discover it and tells me this niche was worth carving out.
