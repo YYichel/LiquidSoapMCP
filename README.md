@@ -1,8 +1,23 @@
-# ⭐ Liquidsoap MCP Server  
+<!-- SEO META TAGS -->
+<meta name="description" content="Liquidsoap MCP Server — AI-powered, version-accurate Liquidsoap 2.4.0 documentation and code generation for Claude, ChatGPT, Cursor, and other MCP clients.">
+<meta name="keywords" content="Liquidsoap, LiquidSoapMCP, MCP Server, AI streaming, web radio, Icecast, HLS, Claude, ChatGPT, LLM, Model Context Protocol, streaming automation, radio automation, .liq scripts, audio pipelines">
+<meta property="og:title" content="LiquidSoap MCP Server">
+<meta property="og:description" content="Give your AI assistant accurate Liquidsoap 2.4.0 documentation, examples, and script validation using the Model Context Protocol.">
+<meta property="og:type" content="software">
+<meta property="og:image" content="https://raw.githubusercontent.com/splinesreticulating/LiquidSoapMCP/main/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- END SEO TAGS -->
+
+# ⭐ LiquidSoap MCP Server  
 ### *AI-powered, version-accurate Liquidsoap scripting using the official 2.4.0 docs.*
 
-![Stars](https://img.shields.io/github/stars/splinesreticulating/LiquidSoapMCP?style=social)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+<!-- BADGES -->
+![GitHub Stars](https://img.shields.io/github/stars/splinesreticulating/LiquidSoapMCP?style=social)
+![GitHub License](https://img.shields.io/github/license/splinesreticulating/LiquidSoapMCP)
+![npm](https://img.shields.io/npm/v/liquidsoap-mcp-server)
+![npm downloads](https://img.shields.io/npm/dm/liquidsoap-mcp-server)
+![Build](https://img.shields.io/github/actions/workflow/status/splinesreticulating/LiquidSoapMCP/ci.yml)
+<!-- END BADGES -->
 
 LLMs get Liquidsoap wrong *all the time*—mixing 1.x docs, outdated blog posts, and half-remembered API examples.
 
@@ -56,7 +71,7 @@ It exposes a clean, structured API around the official docs so your assistant be
 - Highlight common design pitfalls  
 
 ## 🧩 Example Library
-Includes ready-to-use code snippets for:
+Ready-to-use snippets:
 
 - Crossfading  
 - Fallback chains  
@@ -76,16 +91,17 @@ Includes ready-to-use code snippets for:
 
 # 📸 Demo (example)
 
-*(Add GIF or screenshots here)*
+*(Add GIF or screenshots here — I can help generate one.)*
 
-Ask natural questions like:
+Ask:
 
 - “Explain what this Liquidsoap script does.”  
-- “Add a safe fallback chain before the HLS output.”  
-- “Show the API docs for `crossfade`.”  
-- “Rewrite this script using the new 2.4.0 `null` semantics.”  
+- “Add a fallback before the HLS output.”  
+- “Show the docs for `crossfade`.”  
+- “Fix deprecated functions in this script.”  
+- “Rewrite this using Liquidsoap 2.4.0-style `null`.”  
 
-Your AI responds using *only* the real 2.4.0 documentation.
+Your AI responds using *only* the pinned 2.4.0 docs.
 
 ---
 
@@ -93,7 +109,7 @@ Your AI responds using *only* the real 2.4.0 documentation.
 
 ## Prerequisites
 - Node.js ≥ 18  
-- Any MCP-compatible client (Claude Desktop, ChatGPT Desktop, Cursor, Windsurf, etc.)
+- Any MCP-compatible client
 
 ## Install via npm (recommended)
 
@@ -104,8 +120,8 @@ npm install -g liquidsoap-mcp-server
 ## Or run from source
 
 ```bash
-git clone https://github.com/yourname/liquidsoap-mcp.git
-cd liquidsoap-mcp
+git clone https://github.com/splinesreticulating/LiquidSoapMCP.git
+cd LiquidSoapMCP
 npm install
 npm run build
 ```
@@ -140,7 +156,7 @@ npm run build
   "mcpServers": {
     "liquidsoap": {
       "command": "node",
-      "args": ["/absolute/path/to/liquidsoap-mcp/build/index.js"]
+      "args": ["/absolute/path/to/LiquidSoapMCP/build/index.js"]
     }
   }
 }
@@ -173,12 +189,12 @@ npm run build
 
 # 🎯 Roadmap
 
-- [ ] Add Liquidsoap script graph visualization  
-- [ ] Integrate `liquidsoap --check` for real syntax/type validation  
-- [ ] Multi-version switching (2.2.x, 2.3.x)  
-- [ ] Fuzzy search & semantic examples  
+- [ ] Liquidsoap script graph visualization  
+- [ ] Integrate `liquidsoap --check` for full type validation  
+- [ ] Multi-version switching (2.2.x, 2.3.x, etc.)  
+- [ ] Fuzzy search & semantic function lookup  
 - [ ] “Explain this error log” tool  
-- [ ] Snippet library for common pipeline patterns  
+- [ ] Pattern/snippet library  
 
 ---
 
@@ -186,11 +202,11 @@ npm run build
 
 PRs welcome—especially:
 
-- New examples  
-- Improved search  
+- More examples  
+- Better search  
 - Doc parsing improvements  
-- More validation rules  
-- Better MCP client integrations  
+- Additional validation rules  
+- MCP integration templates  
 
 ---
 
@@ -204,7 +220,7 @@ PRs welcome—especially:
 
 # ❤️ Acknowledgments
 
-Built for the Liquidsoap community—and for all the radio nerds, DJs, and hobby streamers who want to make Liquidsoap easier, safer, and way more fun with AI assistance.
+Built for the Liquidsoap community — and for the DJs, webradio operators, self-hosters, and audio nerds who want Liquidsoap to be easier, safer, and more fun with AI assistance.
 
 ---
 
