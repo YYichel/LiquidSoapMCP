@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/splinesreticulating-liquidsoapmcp-badge.png)](https://mseep.ai/app/splinesreticulating-liquidsoapmcp)
+
 <!-- SEO META TAGS -->
 <meta name="description" content="Liquidsoap MCP Server: AI-powered, version-accurate Liquidsoap 2.4.0 documentation and code generation for Claude, ChatGPT, Cursor, and other MCP clients.">
 <meta name="keywords" content="Liquidsoap, LiquidSoapMCP, MCP Server, AI streaming, web radio, Icecast, HLS, Claude, ChatGPT, LLM, Model Context Protocol, streaming automation, radio automation, .liq scripts, audio pipelines">
