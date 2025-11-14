@@ -75,7 +75,7 @@ Ready-to-use snippets:
 - Blank detection  
 - Multi-output pipelines  
 
-## ⚡ Fast & Local  
+## Fast & Local  
 - Docs cached and indexed for instant responses  
 - No web requests needed once running  
 
